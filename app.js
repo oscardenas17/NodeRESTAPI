@@ -6,9 +6,13 @@ import productsRoutes from '../src/routes/products.routes'
 
 const app = express();
 
+//Muestra en consola las llamadas https realizadas
+app.use(morgan('dev'));
+//leer datos json que llegan al server
+app.use(express.json());
 
 app.set('pkg',pkg)
-app.use(morgan('dev'));
+
 
 
 app.get('/', (req,res) => {
