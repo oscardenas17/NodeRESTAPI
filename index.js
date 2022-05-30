@@ -1,5 +1,17 @@
 import app from './app';
+import dotenv from 'dotenv';
+import conectarDB from './database.js';
 
-app.listen(4000);
+dotenv.config()
+const PORT = process.env.PORT || 4000;
+conectarDB();
 
-console.log('server starting on port ' + 4000);
+
+
+app.listen(PORT, () =>{
+    console.log('server starting on port ' + PORT);
+});
+
+
+
+
