@@ -1,7 +1,5 @@
-import express from 'express';
+import app from './app';
 
-const app = express();
-const port = 3000;
-app.listen(port);
+app.listen(4000);
 
-console.log('server starting on port ' + port);
+console.log('server starting on port ' + 4000);
