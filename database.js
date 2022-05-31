@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { createRoles } from './libs/initialSetup';
 
  
 
@@ -11,7 +12,10 @@ const conectarDB = async () => {
         );
 
      const url = `${connection.connection.host}: ${connection.connection.port}`;
-     console.log('Db conectada en ' + url);   
+     console.log('Db conectada en ' + url);  
+
+     createRoles(); 
+     
     }   catch (error) {
         console.log(`error: ${error.message}`);
         process.exit(1);

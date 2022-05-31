@@ -1,16 +1,19 @@
 import express from 'express';
 import morgan from 'morgan';
 import pkg from '../package.json';
+
 import productsRoutes from '../src/routes/products.routes.js';
 import authRoutes from '../src/routes/auth.routes';
 
 
 const app = express();
 
+
 //Muestra en consola las llamadas https realizadas
 app.use(morgan('dev'));
 //leer datos json que llegan al server
 app.use(express.json());
+
 
 app.set('pkg',pkg)
 
