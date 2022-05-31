@@ -9,7 +9,7 @@ const productSchema = new Schema(
   },
   {
     timestamps: true,
-    vserionKey: false,
+    versionKey: false,
   }
 );
 
