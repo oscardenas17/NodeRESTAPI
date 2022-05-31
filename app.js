@@ -4,6 +4,8 @@ import pkg from '../package.json';
 
 import productsRoutes from '../src/routes/products.routes.js';
 import authRoutes from '../src/routes/auth.routes';
+import userRoutes from '../src/routes/user.routes'
+
 
 
 const app = express();
@@ -28,5 +30,6 @@ app.get('/', (req,res) => {
 
 app.use('/api/products',productsRoutes)
 app.use('/api/auth',authRoutes)
+app.use('/api/users',userRoutes)
 
 export default app
